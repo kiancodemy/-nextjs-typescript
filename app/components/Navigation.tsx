@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import { useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 import { TfiClose } from "react-icons/tfi";
@@ -16,6 +18,10 @@ const navigationmenue = [
 ];
 
 export default function Navigation() {
+  const [isopen, setopen] = useState<boolean>(false);
+  const mobilemenuehandler = () => {
+    setopen(!isopen);
+  };
   return (
     <>
       <header className="py-7">
@@ -45,7 +51,10 @@ export default function Navigation() {
                 Get started
               </Link>
 
-              <button className="lg:hidden block text-3xl ">
+              <button
+                onClick={mobilemenuehandler}
+                className="lg:hidden block text-3xl "
+              >
                 <RxHamburgerMenu />
               </button>
             </div>
@@ -53,13 +62,19 @@ export default function Navigation() {
         </div>
       </header>
       {/*menu baar*/}
-      <div>
+      <div
+        className={
+          isopen
+            ? "w-screen h-screen fixed top-0 z-[11] block"
+            : "w-screen h-screen fixed top-0 z-[11] hidden"
+        }
+      >
         <div className="fixed w-screen h-screen z-[11] top-0 bg-black bg-opacity-50">
           <div className="bg-white h-screen w-[380px] fixed z-[12] top-0 right-0 ">
             <div className="flex items-center h-14 px-10 border-b ">
               <button className="flex items-center space-x-3 ">
                 <TfiClose></TfiClose>
-                <span>Close</span>
+                <span onClick={mobilemenuehandler}>Close</span>
               </button>
             </div>
             <div className=" h-full py-3 px-10 pb-20 overflow-y-scroll scroll-smooth">
@@ -72,7 +87,7 @@ export default function Navigation() {
                         href={value.href}
                       >
                         <span>{value.label}</span>
-                        <span className="opacity-0 ease-in-out duration-300  relative left-2 group-hover:left-4 group-hover:opacity-100 ">
+                        <span className=" text-xl opacity-0 ease-in-out duration-300  relative left-2 group-hover:left-4 group-hover:opacity-100 ">
                           <FiChevronRight />
                         </span>
                       </Link>
