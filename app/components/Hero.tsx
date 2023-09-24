@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div>
+    <section className='py-20'>
       
-    </div>
+    </section>
   )
 }
