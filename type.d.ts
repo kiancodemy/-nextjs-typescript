@@ -1,1 +1,1 @@
-type size = { height: number; width: number };
+type size = { height: Number; width: Number };

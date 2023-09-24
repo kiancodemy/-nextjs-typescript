@@ -12,7 +12,7 @@ const config: Config = {
         primary: "#1D5B79",
         secondary: "#2EC0BB",
         heading: "#233036",
-        body: "#F6F6F6",
+        body: "#667074",
         lightyellow: "#FFF3D9",
         greenlight: "#CCF0EE",
         purplelight: "#AEA3E1",
