@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -19,9 +19,26 @@ const navigationmenue = [
 
 export default function Navigation() {
   const [isopen, setopen] = useState<boolean>(false);
+  const [dimention, setdimention] = useState<size>({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
   const mobilemenuehandler = () => {
     setopen(!isopen);
   };
+  useEffect(() => {
+    function handle() {
+      setdimention({ height: window.innerHeight, width: window.innerWidth });
+      if (dimention.width > 768 && isopen) {
+        setopen(false);
+      }
+    }
+    window.addEventListener("resize", handle);
+    return () => {
+      window.removeEventListener("resize", handle);
+    };
+  });
+
   return (
     <>
       <header className="py-7">
