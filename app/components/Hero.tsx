@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const herocontent = {
   text: {
     sub: "Welcome to FamSec",
@@ -8,11 +9,11 @@ const herocontent = {
       "We understand that protecting your loved ones is of utmost importance. That's why we are dedicated to providing comprehensive solutions tailored to your family's unique needs. Our expert team is committed to creating a solid foundation of security and peace of mind for you and your loved ones.",
   },
   images: {
-    image1: "/images/hero-img-1.jpg ",
-    image2: "/images/hero-img-2.jpg ",
-    image3: "/images/hero-img-3.jpg ",
-    image4: "/images/hero-img-4.jpg ",
-    image5: "/images/hero-img-5.jpg ",
+    image1: "/images/hero-img-1-min.jpg",
+    image2: "/images/hero-img-2-min.jpg ",
+    image3: "/images/hero-img-3-min.jpg ",
+    image4: "/images/hero-img-4-min.jpg ",
+    image5: "/images/hero-img-5-min.jpg ",
   },
 };
 
@@ -46,9 +47,61 @@ export default function Hero() {
               </Link>
             </div>
           </div>
+          {/*secondpart*/}
+          <div className="lg:w-6/12 space-y-2">
+            <div className="flex items-stretch space-x-2">
+              <div className="w-8/12 ">
+                <Image
+                  alt="it is father image"
+                  width={397}
+                  height={400}
+                  src={herocontent.images.image1}
+                  className="rounded-lg object-cover h-full w-full"
+                ></Image>
+              </div>
+              <div className="w-4/12 self-end space-y-2 ">
+                <div className="grid grid-cols-2 gap-2">
+                  <div>
+                    <Image
+                      alt="family"
+                      className="rounded-md h-full w-full "
+                      width={437}
+                      height={437}
+                      src={herocontent.images.image2}
+                    ></Image>
+                  </div>
+                  <div className="bg-lightyellow rounded-2xl rounded-tr-[200px]"></div>
+                </div>
+              </div>
+            </div>
+            {/*second*/}
+            <div className="flex space-x-2">
+              <div className="w-4/12">
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="bg-greenlight rounded-2xl rounded-bl-[200px]"></div>
+                  <div>
+                    <Image
+                      src={herocontent.images.image4}
+                      alt="familt-2"
+                      width={437}
+                      height={437}
+                      className="object-cover h-full w-full rounded-2xl"
+                    ></Image>
+                  </div>
+                </div>
+              </div>
+              <div className="w-5/12">
+                <Image
+                  alt="mom"
+                  className="h-full w-full object-cover"
+                  width={400}
+                  height={400}
+                  src={herocontent.images.image5}
+                ></Image>
+              </div>
+            </div>
+          </div>
         </div>
-        {/*secondpart*/}
-        <div></div>
       </div>
     </section>
   );
