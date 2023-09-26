@@ -38,7 +38,7 @@ export default function Stats() {
             </div>
           </div>
           <div className="w-full lg:w-5/12">
-            <div className="bg-[#e5e7eb] py-10 px-7 lg:px-10 !pr-28  rounded-lg md:!pr-32 lg:pr-40 relative">
+            <div className="bg-light py-10 px-7 lg:px-10 !pr-28  rounded-lg md:!pr-32 lg:pr-40 relative">
               <Image
                 alt="d"
                 width={510}
@@ -54,7 +54,7 @@ export default function Stats() {
                 <span className="capitalize font-bold text-md text-primary text-bold">
                   learn more
                 </span>
-                <span className="text-primary transition-all duration-300 ease-out  group-hover:text-secondary inline-flex justify-center items-center text-2xl">
+                <span className="text-primary transition-all duration-300 ease-in-out  group-hover:text-secondary inline-flex justify-center items-center text-2xl">
                   <BsFillArrowRightCircleFill></BsFillArrowRightCircleFill>
                 </span>
               </Link>

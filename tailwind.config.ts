@@ -12,6 +12,7 @@ const config: Config = {
         primary: "#1D5B79",
         secondary: "#2EC0BB",
         heading: "#233036",
+        light: "#F6F6F6",
         body: "#667074",
         lightyellow: "#FFF3D9",
         greenlight: "#CCF0EE",
