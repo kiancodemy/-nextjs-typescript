@@ -22,7 +22,7 @@ export default function Hero() {
     <section className="py-20">
       <div className="container px-4 mx-auto">
         <div className="lg:flex items-center justify-between">
-          <div className="lg:w-5/12 lg:mb-0 ">
+          <div className="lg:w-5/12 lg:mb-0 mb-10 ">
             <span className="relative mb-10 text-heading before:hover:w-full before:duration-500  inline-block py-0.5 pl-3 font-semibold before:content-[''] before:absolute before:top-0 before:left-0 before:bottom-0 before:bg-lightyellow before:w-0 before:z-[-2] ">
               {herocontent.text.sub}
             </span>
