@@ -51,7 +51,7 @@ export default function Service() {
     <section>
       <div className="container bg-light py-10 mt-10 mx-auto ">
         <div className="text-center mt-5">
-          <span className="before:content-[' '] relative before:w-2/3 before:absolute before:top-0 before:left-0 before:bottom-0 before:bg-lightyellow before:z-[-22] font-semiboldl text-xl ">
+          <span className="before:content-[''] relative before:w-0 before:hover:w-full before:transition-all before:duration-[1500ms] before:rounded-md py-1 px-2 ease-in before:absolute before:top-0 before:left-0 before:z-[-5] before:bottom-0 before:bg-yellow-500 z-50 font-semiboldl text-xl ">
             {servicecotent.heading.sub}
           </span>
           <h1 className="font-bold text-4xl py-5 ">
