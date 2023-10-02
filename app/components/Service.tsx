@@ -70,21 +70,21 @@ const elements = servicecotent.items.map((element) => {
 
 export default function Service() {
   return (
-    <section>
-      <div className=" bg-light py-10 mt-10  ">
-        <div className="text-center mt-5">
+    <section className="bg-light">
+      <div className=" container mx-auto py-10 mt-10 mb-20  ">
+        <div className="max-w-xl text-center mx-auto mt-5">
           <span className="before:content-[''] relative before:w-0 before:hover:w-full before:transition-all before:duration-500 before:rounded-md py-1 px-2 ease-in before:absolute before:top-0 before:left-0 before:z-[-5] before:bottom-0 before:bg-yellow-500 z-50 font-semiboldl text-xl ">
             {servicecotent.heading.sub}
           </span>
-          <h1 className="font-bold text-3xl lg:text-4xl py-5 ">
+          <h1 className="font-bold text-2xl lg:text-4xl py-5 ">
             {servicecotent.heading.title}
           </h1>
-          <p className="w-8/10 lg:w-1/2 px-[28px] text-body mx-auto leading-7">
+          <p className=" text-body mx-auto leading-7">
             {servicecotent.heading.des}
           </p>
         </div>
         {/*second  */}
-        <div className="py-16 px-10 gap-x-3 gap-y-6  lg:grid md:grid-cols-2 md:grid lg:grid-cols-3 flex flex-col">
+        <div className="py-16 px-10 gap-x-3 gap-y-6 grid-col-1  lg:grid md:grid-cols-2  lg:grid-cols-3 grid grid-col1-1">
           {elements}
         </div>
       </div>
