@@ -48,10 +48,10 @@ const servicecotent = {
 };
 const elements = servicecotent.items.map((element) => {
   return (
-    <div key={element.title} className="flex gap-5 ">
-      <div className="w-1/6 self-start bg-white shadow-[0_5px_20px_0px_rgba(0,0,0,0.2)] rounded-lg">
+    <div key={element.title} className="flex space-x-5 ">
+      <div className="w-1/6 self-start  bg-white shadow-[0_5px_20px_0px_rgba(0,0,0,0.2)] rounded-lg">
         <Image
-          className="p-2 object-cover w-full h-full"
+          className="p-2 w-full h-full"
           alt="s"
           width={50}
           height={100}
@@ -84,7 +84,7 @@ export default function Service() {
           </p>
         </div>
         {/*second  */}
-        <div className="py-16 px-10 gap-x-3 gap-y-6 grid-col-1  lg:grid md:grid-cols-2  lg:grid-cols-3 grid grid-col1-1">
+        <div className="py-16 px-10  gap-10 grid-col-1  lg:grid md:grid-cols-2  lg:grid-cols-3 grid grid-col1-1">
           {elements}
         </div>
       </div>
