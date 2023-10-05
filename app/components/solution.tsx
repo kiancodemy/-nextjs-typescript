@@ -40,8 +40,8 @@ export default function Solution() {
   return (
     <section className="py-32 bg-light overflow-x-hidden">
       <div className="px-4 mx-auto container">
-        <div className="lg:flex lg:justify-between lg:space-x-4 ">
-          <div className="lg:w-6/12 lg:p-7 z-50 relative before:w-screen before:-top-20 before:-bottom-20 before:rounded-tr-[200px] before:rounded-br-3xl before:z-[-2] before:absolute before:content-[''] before:">
+        <div className="lg:flex lg:justify-between lg:gap-x-2 ">
+          <div className="lg:w-6/12 rounded-lg  z-50 relative before:w-screen before:-top-20 before:-bottom-20 before:rounded-tr-[200px] before:rounded-br-3xl before:z-[-2] before:absolute before:content-[''] before:">
             <div className="flex space-x-2">
               <div className="flex w-1/2 gap-y-2 flex-col">
                 <div className="rounded-md  overflow-hidden">
@@ -53,7 +53,7 @@ export default function Solution() {
                     className="w-full h-full object-cover"
                   ></Image>
                 </div>
-                <div className="flex justify-end space-x-2 ">
+                <div className="flex justify-end space-x-1 lg:space-x-3 ">
                   <div className="w-4/12">
                     <div className="bg-greenlight rounded-2xl rounded-bl-[200px] w-10 h-10 lg:h-24 lg:w-24"></div>
                   </div>
@@ -81,7 +81,7 @@ export default function Solution() {
                     className="w-full h-full object-cover rounded-lg"
                   ></Image>
                 </div>
-                <div className="bg-white py-7 rounded flex flex-col">
+                <div className="bg-white shadow-[0_4px_18px_0px_rgba(0,0,0,0.15)] py-7 rounded-xl flex flex-col">
                   <p className=" pl-7 font-bold text-2xl lg:text-5xl text-primary ">
                     25+
                   </p>
@@ -91,11 +91,11 @@ export default function Solution() {
             </div>
             <div className="flex w-1/2"></div>
           </div>
-          <div className="lg:w-6/12">
-            <span className="before:content-[''] mb-5 relative before:w-1/3 before:hover:w-full before:transition-all before:duration-500 before:rounded-md py-1 px-2 ease-in before:absolute before:top-0 before:left-0 before:z-[-5] before:bottom-0 before:bg-yellow-300 z-50 font-boldl text-xl ">
+          <div className="lg:w-6/12 pl-20 ">
+            <span className="before:content-[''] mb-5 relative before:w-1/3 before:hover:w-full before:transition-all before:duration-500 before:rounded-md py-1 px-2 ease-in before:absolute before:top-0 before:left-0 before:z-[-5] before:bottom-0 before:bg-yellow-300 z-50 font-boldl text-md ">
               {solutions.text.head}
             </span>
-            <h1 className="font-bold mb-5 py-4 text-2xl max-w-xl lg:text-4xl text-heading">
+            <h1 className="font-bold mb-5 py-4 text-2xl  lg:text-4xl text-heading">
               {solutions.text.title}
             </h1>
             <p className="text-body text-md ">{solutions.text.des}</p>
