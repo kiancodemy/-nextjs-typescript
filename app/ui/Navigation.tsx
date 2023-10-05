@@ -53,7 +53,7 @@ export default function Navigation() {
               <ul className="flex space-x-7">
                 {navigationmenue.map((value, key) => {
                   return (
-                    <li key={value.label}>
+                    <li className="text-body" key={value.label}>
                       <Link href={value.href}>{value.label}</Link>
                     </li>
                   );

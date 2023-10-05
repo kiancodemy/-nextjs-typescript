@@ -71,7 +71,7 @@ const elements = servicecotent.items.map((element) => {
 export default function Service() {
   return (
     <section className="bg-light">
-      <div className=" container mx-auto py-10 mt-10 mb-20  ">
+      <div className=" container mx-auto py-10 mt-10 ">
         <div className="max-w-xl text-center mx-auto mt-5">
           <span className="before:content-[''] relative before:w-0 before:hover:w-full before:transition-all before:duration-500 before:rounded-md py-1 px-2 ease-in before:absolute before:top-0 before:left-0 before:z-[-5] before:bottom-0 before:bg-yellow-500 z-50 font-semiboldl text-xl ">
             {servicecotent.heading.sub}
