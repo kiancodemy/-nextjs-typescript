@@ -22,8 +22,8 @@ export default function Stats() {
   return (
     <section className="pt-20 pb-10">
       <div className="px-4 container mx-auto">
-        <div className="lg:flex justify-between items-center space-x-0">
-          <div className="w-full lg:w-7/12 mb-20 lg:mb-0">
+        <div className="lg:flex-row flex-col flex justify-between items-center space-x-0">
+          <div className="lg:basis-7/12 mb-20 lg:mb-0">
             <div className="grid grid-cols-3">
               {statcontent.stat.map((a, b) => {
                 return (
@@ -37,7 +37,7 @@ export default function Stats() {
               })}
             </div>
           </div>
-          <div className="w-full lg:w-5/12">
+          <div className=" lg:basis-5/12">
             <div className="bg-light py-10 px-7 lg:px-10 !pr-28  rounded-lg md:!pr-32 lg:pr-40 relative">
               <Image
                 alt="d"

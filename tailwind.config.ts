@@ -17,6 +17,7 @@ const config: Config = {
         lightyellow: "#FFF3D9",
         greenlight: "#CCF0EE",
         purplelight: "#AEA3E1",
+        pink: "#FF8551",
       },
     },
   },
