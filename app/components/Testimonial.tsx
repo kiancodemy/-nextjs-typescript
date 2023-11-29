@@ -33,7 +33,7 @@ export default function Testimonial() {
   };
   return (
     <section className="bg-light">
-      <div className="container px-2 mx-auto mb-4">
+      <div className="container px-2 mx-auto">
         <div className="grid lg:grid-cols-3 grid-cols-1">
           <div className="lg:py-6 py-3">
             <h1 className="text-heading font-bold text-2xl lg:text-4xl py-4">

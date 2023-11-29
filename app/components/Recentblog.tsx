@@ -1,8 +1,5 @@
 "use client";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
 
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import { useRef, useCallback, useState, useEffect } from "react";
@@ -11,10 +8,10 @@ import Image from "next/image";
 
 export default function Recentblog() {
   const [slideindex, setslideindex] = useState<number>(0);
-  const [isend, setisned] = useState<any>(null);
-  const slideref = useRef(null);
+  const [isend, setisned] = useState<number>(0);
+  const [active, setactive] = useState<number>(0);
 
-  const content = {
+  const items = {
     heading: {
       subtitle: "Our Writeups",
       title: "Our Latest Articles",
@@ -24,14 +21,14 @@ export default function Recentblog() {
     recentblog: [
       {
         paramlink: "#",
-        featuring: "/image/post-1-min.jpg",
+        featuring: "/images/post-1-min.jpg",
         title: "10 Essential Tips for Protecting Your Home from Burglaries",
         description:
           "Learn the best practices and simple steps to safeguard your home and loved ones from potential break-ins and theft.",
       },
       {
         paramlink: "#",
-        featuring: "/image/post-2-min.jpg",
+        featuring: "/images/post-2-min.jpg",
         title:
           "the ultimate guide to choosing the right life insurance for your family ",
         description:
@@ -39,7 +36,7 @@ export default function Recentblog() {
       },
       {
         paramlink: "#",
-        featuring: "/image/post-3-min.jpg",
+        featuring: "/images/post-3-min.jpg",
         title:
           "A Comprehensive Guide to Choosing the Right Family Health Insurance Plan",
         description:
@@ -47,42 +44,115 @@ export default function Recentblog() {
       },
       {
         paramlink: "#",
-        featuring: "/image/post-3-min.jpg",
+        featuring: "/images/post-3-min.jpg",
         title: "Understanding Homeowners Insurance",
         description:
           "This blog post might explain the basics of homeowners insurance, what it covers, and why it's crucial for safeguarding your family and home.",
       },
       {
         paramlink: "#",
-        featuring: "/image/post-2-min.jpg",
+        featuring: "/images/post-2-min.jpg",
         title: "Finances ",
         description:
           "This blog post might explain the basics of homeowners insurance, what it covers, and why it's crucial for safeguarding your family and home.",
       },
     ],
   };
+
+  useEffect(() => {
+    const a = setTimeout(() => {
+      if (active < items.recentblog.length - 1) {
+        setactive((prev) => prev + 1);
+      } else {
+        setactive(0);
+      }
+    }, 3000);
+    return () => {
+      return clearTimeout(a);
+    };
+  }, [active]);
+
+  const increase = () => {
+    if (active < items.recentblog.length - 1) {
+      setactive((prev) => prev + 1);
+    } else {
+      setactive(0);
+    }
+  };
+  const decrease = () => {
+    if (active === 0) {
+      setactive(items.recentblog.length - 1);
+    } else {
+      setactive((prev) => prev - 1);
+    }
+  };
+  const getall = items.recentblog.map((a) => {
+    return (
+      <div
+        key={a.title}
+        className="inline-flex py-6 px-2 justify-center items-center"
+      >
+        <Image
+          className="object-cover rounded-md object-center"
+          alt="d"
+          src={a.featuring}
+          width={350}
+          height={150}
+        ></Image>
+
+        <div className="px-4 flex h-[300px] flex-col justify-center items-center">
+          <p className="text-primary whitespace-normal font-bold text-2xl">
+            {a.title}
+          </p>
+          <p className="text-body whitespace-normal ">{a.description}</p>
+        </div>
+      </div>
+    );
+  });
   return (
-    <section className="bg-light py-20 overflow-x-hidden">
+    <section className="bg-light py-20 ">
       <div className="container px-4 mx-auto">
         <div className="lg:flex justify-between items-center mb-8">
           <div className="lg:basis-5/12 mb-8 lg:mb-0">
             <span className="font-semibold before:absolute before:top-0 before:bottom-0 relative before:left-0 before:-z-10 before:rounded-md before:bg-lightyellow z-10  before:w-3/5  py-1 px-2 inline-block">
-              {content.heading.subtitle}
+              {items.heading.subtitle}
             </span>
             <h1 className="lg:text-4xl text-heading text-2xl py-2 capitalize font-bold">
-              {content.heading.title}
+              {items.heading.title}
             </h1>
             <p className="py-4 text-md text-body">
-              {content.heading.description}
+              {items.heading.description}
             </p>
           </div>
           <div className="mb-8 lg:mb-0 gap-4 flex justify-center items-center ">
-            <button className="text-primary cursor-pointer opacity-70 hover:opacity-100 text-xl font-bold hover:bg-primary hover:text-white duration-200 flex justify-center items-center bg-[#d7e2fa] p-4 rounded-full">
+            <button
+              onClick={decrease}
+              className="text-primary cursor-pointer opacity-70 hover:opacity-100 text-xl font-bold hover:bg-primary hover:text-white duration-200 flex justify-center items-center bg-[#d7e2fa] p-4 rounded-full"
+            >
               <AiOutlineDoubleLeft></AiOutlineDoubleLeft>
             </button>
-            <button className="text-primary cursor-pointerv opacity-70 hover:opacity-100 text-xl font-bold hover:bg-primary hover:text-white duration-200 flex justify-center items-center bg-[#d7e2fa] p-4 rounded-full">
+            <button
+              onClick={increase}
+              className="text-primary cursor-pointerv opacity-70 hover:opacity-100 text-xl font-bold hover:bg-primary hover:text-white duration-200 flex justify-center items-center bg-[#d7e2fa] p-4 rounded-full"
+            >
               <AiOutlineDoubleRight></AiOutlineDoubleRight>
             </button>
+          </div>
+        </div>
+
+        <div>
+          <div className="w-[1000px] mx-auto overflow-x-hidden ">
+            <div className="w-[800px] justify-center  flex flex-col px-1   ">
+              <div
+                style={{
+                  transform: `translateX(-${active * 100}%)`,
+                  transition: "transform 1s",
+                }}
+                className=" whitespace-nowrap"
+              >
+                {getall}
+              </div>
+            </div>
           </div>
         </div>
       </div>
