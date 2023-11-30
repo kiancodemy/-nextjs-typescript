@@ -6,13 +6,13 @@ import Testimonial from "./components/Testimonial";
 import Recentblog from "./components/Recentblog";
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden">
       {/*<Hero></Hero>
       <Stats></Stats>
       <Service></Service>
       <Solution></Solution>
   <Testimonial></Testimonial>*/}
       <Recentblog></Recentblog>
-    </>
+    </div>
   );
 }

@@ -62,10 +62,12 @@ export default function Recentblog() {
 
   useEffect(() => {
     const a = setTimeout(() => {
-      if (active < items.recentblog.length - 1) {
-        setactive((prev) => prev + 1);
-      } else {
-        setactive(0);
+      if (window.innerWidth > 800) {
+        if (active < items.recentblog.length - 1) {
+          setactive((prev) => prev + 1);
+        } else {
+          setactive(0);
+        }
       }
     }, 3000);
     return () => {
@@ -91,7 +93,7 @@ export default function Recentblog() {
     return (
       <div
         key={a.title}
-        className="inline-flex py-6 px-2 justify-center items-center"
+        className="inline-flex lg:flex-row flex-col space-y-4 lg:py-6 lg:px-2 justify-center items-center"
       >
         <Image
           className="object-cover rounded-md object-center"
@@ -101,8 +103,8 @@ export default function Recentblog() {
           height={150}
         ></Image>
 
-        <div className="px-4 flex h-[300px] flex-col justify-center items-center">
-          <p className="text-primary whitespace-normal font-bold text-2xl">
+        <div className="px-4 flex h-[500px] lg:h-[300px] lg:justify-center flex-col  items-center">
+          <p className="text-primary whitespace-normal font-bold text-lg lg:text-2xl">
             {a.title}
           </p>
           <p className="text-body whitespace-normal ">{a.description}</p>
@@ -142,8 +144,8 @@ export default function Recentblog() {
         </div>
 
         <div>
-          <div className="w-[1000px] mx-auto overflow-x-hidden ">
-            <div className="w-[800px] justify-center  flex flex-col px-1   ">
+          <div className="lg:w-[1000px] w-[500px] mx-auto overflow-x-hidden ">
+            <div className="lg:w-[800px] w-[300px] justify-center  flex flex-col overflow-hidden lg:overflow-visible">
               <div
                 style={{
                   transform: `translateX(-${active * 100}%)`,
@@ -155,20 +157,20 @@ export default function Recentblog() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <span className="inline-flex border space-x-1 border-light duration-500 hover:border-primary  rounded-full  px-6 py-2 justify-center items-center">
-          <span className="capitalize text-body">to view all posts</span>
-          <span className="text-primary font-bold">click here</span>
-          <span className="text-2xl text-body">
-            <AiOutlineMore></AiOutlineMore>
-          </span>
+          <div className="flex justify-center">
+            <span className="inline-flex border space-x-1 border-light duration-500 hover:border-primary  rounded-full  px-1 py-2 justify-center items-center">
+              <span className="capitalize text-body">to view all posts</span>
+              <span className="text-primary font-bold">click here</span>
+              <span className="text-2xl text-body">
+                <AiOutlineMore></AiOutlineMore>
+              </span>
 
-          <span className="rounded-full text-primary text-4xl">
-            <AiFillRightCircle></AiFillRightCircle>
-          </span>
-        </span>
+              <span className="rounded-full text-primary text-4xl">
+                <AiFillRightCircle></AiFillRightCircle>
+              </span>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
