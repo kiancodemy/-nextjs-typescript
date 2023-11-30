@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { AiFillRightCircle, AiOutlineMore } from "react-icons/ai";
 
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import { useRef, useCallback, useState, useEffect } from "react";
@@ -155,6 +156,19 @@ export default function Recentblog() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <span className="inline-flex border space-x-1 border-light duration-500 hover:border-primary  rounded-full  px-6 py-2 justify-center items-center">
+          <span className="capitalize text-body">to view all posts</span>
+          <span className="text-primary font-bold">click here</span>
+          <span className="text-2xl text-body">
+            <AiOutlineMore></AiOutlineMore>
+          </span>
+
+          <span className="rounded-full text-primary text-4xl">
+            <AiFillRightCircle></AiFillRightCircle>
+          </span>
+        </span>
       </div>
     </section>
   );
