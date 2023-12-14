@@ -8,9 +8,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Recentblog() {
-  const [slideindex, setslideindex] = useState<number>(0);
-  const [isend, setisned] = useState<number>(0);
-  const [active, setactive] = useState<number>(0);
+  const [slideindex, setslideindex] = useState<Number>(0);
+  const [isend, setisned] = useState<Number>(0);
+  const [active, setactive] = useState<any>(0);
 
   const items = {
     heading: {
