@@ -27,7 +27,7 @@ const solutions = {
 };
 const featuresection = solutions.features.map((element) => {
   return (
-    <div className="flex py-1 space-x-4">
+    <div key={element.title} className="flex py-1 space-x-4">
       <span className="text-3xl text-primary">
         <BsFillCheckCircleFill />
       </span>
