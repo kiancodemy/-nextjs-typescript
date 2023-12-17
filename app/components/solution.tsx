@@ -91,7 +91,7 @@ export default function Solution() {
             </div>
             <div className="flex w-1/2"></div>
           </div>
-          <div className="lg:w-6/12 pl-20 ">
+          <div className="lg:w-6/12 lg:pl-20 ">
             <span className="before:content-[''] mb-5 relative before:w-1/3 before:hover:w-full before:transition-all before:duration-500 before:rounded-md py-1 px-2 ease-in before:absolute before:top-0 before:left-0 before:z-[-5] before:bottom-0 before:bg-yellow-300 z-50 font-boldl text-md ">
               {solutions.text.head}
             </span>

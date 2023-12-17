@@ -3,14 +3,14 @@ import React from "react";
 import { AiFillRightCircle, AiOutlineMore } from "react-icons/ai";
 
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
-import { useRef, useCallback, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Recentblog() {
   const [slideindex, setslideindex] = useState<Number>(0);
   const [isend, setisned] = useState<Number>(0);
-  const [active, setactive] = useState<any>(0);
+  const [active, setactive] = useState<number>(0);
 
   const items = {
     heading: {
