@@ -46,11 +46,11 @@ export default function Solution() {
               <div className="flex w-1/2 gap-y-2 flex-col">
                 <div className="rounded-md  overflow-hidden">
                   <Image
+                    priority
                     alt="kian"
                     src={solutions.images.img1}
                     width={620}
                     height={620}
-                    className="w-full h-full object-cover"
                   ></Image>
                 </div>
                 <div className="flex justify-end space-x-1 lg:space-x-3 ">
@@ -59,6 +59,7 @@ export default function Solution() {
                   </div>
                   <div className="w-6/12">
                     <Image
+                      priority
                       alt="hi"
                       src={solutions.images.img3}
                       width={620}
@@ -74,11 +75,12 @@ export default function Solution() {
                 </div>
                 <div>
                   <Image
+                    priority
                     alt="hi"
                     src={solutions.images.img2}
                     width={420}
                     height={420}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="block object-cover rounded-lg"
                   ></Image>
                 </div>
                 <div className="bg-white shadow-[0_4px_18px_0px_rgba(0,0,0,0.15)] py-7 rounded-xl flex flex-col">

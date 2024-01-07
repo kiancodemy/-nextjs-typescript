@@ -23,6 +23,7 @@ export default function Navigation() {
     height: window.innerHeight,
     width: window.innerWidth,
   });
+
   const mobilemenuehandler = () => {
     setopen(!isopen);
   };
@@ -115,7 +116,6 @@ export default function Navigation() {
             </div>
           </div>
         </div>
-        {/*menu baar*/}
       </div>
     </>
   );

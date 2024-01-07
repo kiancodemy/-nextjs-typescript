@@ -83,7 +83,7 @@ export default function Service() {
             {servicecotent.heading.des}
           </p>
         </div>
-        {/*second  */}
+
         <div className="py-16 px-10  gap-10 grid-col-1  lg:grid md:grid-cols-2  lg:grid-cols-3 grid grid-col1-1">
           {elements}
         </div>

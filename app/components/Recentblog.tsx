@@ -4,12 +4,12 @@ import { AiFillRightCircle, AiOutlineMore } from "react-icons/ai";
 
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import { useState, useEffect } from "react";
-import Link from "next/link";
+
 import Image from "next/image";
 
 export default function Recentblog() {
-  const [slideindex, setslideindex] = useState<Number>(0);
-  const [isend, setisned] = useState<Number>(0);
+  const [slideindex, setslideindex] = useState<number>(0);
+  const [isend, setisned] = useState<number>(0);
   const [active, setactive] = useState<number>(0);
 
   const items = {
@@ -96,7 +96,7 @@ export default function Recentblog() {
         className="inline-flex lg:flex-row flex-col space-y-4 lg:py-6 px-2 justify-center items-center"
       >
         <Image
-          className="object-cover rounded-md object-center"
+          priority
           alt="d"
           src={a.featuring}
           width={350}

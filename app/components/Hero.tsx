@@ -47,7 +47,7 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-          {/*secondpart*/}
+
           <div className="lg:w-6/12 space-y-2">
             <div className="flex items-stretch space-x-2">
               <div className="w-8/12 ">
@@ -64,7 +64,7 @@ export default function Hero() {
                   <div>
                     <Image
                       alt="family"
-                      className="rounded-md h-full w-full "
+                      className="rounded-md block "
                       width={437}
                       height={437}
                       src={herocontent.images.image2}
@@ -85,7 +85,7 @@ export default function Hero() {
                       alt="familt-2"
                       width={437}
                       height={437}
-                      className="object-cover h-full w-full rounded-2xl"
+                      className="object-cover block rounded-2xl"
                     ></Image>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function Hero() {
               <div className="w-5/12">
                 <Image
                   alt="mom"
-                  className="h-full w-full object-cover"
+                  className="block object-cover"
                   width={400}
                   height={400}
                   src={herocontent.images.image5}

@@ -53,6 +53,7 @@ export default function Testimonial() {
                 <div className="flex gap-2 p-2 justify-start">
                   <div className="overflow-hidden rounded-full  w-[50px] h-[50px]">
                     <Image
+                     
                       src={testimoialcontent.testimonial[0].img}
                       className="object-cover h-full w-full"
                       width={100}
@@ -105,7 +106,6 @@ export default function Testimonial() {
               </div>
             </div>
           </section>
-          {/*third  */}
 
           <section className="flex lg:py-6 flex-col space-y-4">
             <div className="h-1/4 lg:flex lg:justify-start lg:items-end hidden ">
